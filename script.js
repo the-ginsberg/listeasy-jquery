@@ -14,6 +14,16 @@ var main = function() {
     return false;
   });
 
+
+  $(".list").on('click', '.glyphicon-star', function(){
+    $(this).toggleClass("active");
+  });
+
+  $(".list").on('click', '.glyphicon-remove', function(){
+    $(this).closest('p').remove();
+  });
+
+
 };
 
 $(document).ready(main);
