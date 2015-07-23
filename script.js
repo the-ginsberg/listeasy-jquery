@@ -4,13 +4,16 @@ var template = function(text) {
 
 var main = function() {
   $('form').submit(function() {
-      
-    
-    
-    return false;  
-  }
-  
-  
+    var text = $("#todo").val(),
+        formatted_text = template(text);
+
+    $(".list").append(formatted_text);
+
+    $("#todo").val("");
+
+    return false;
+  });
+
 };
 
 $(document).ready(main);
